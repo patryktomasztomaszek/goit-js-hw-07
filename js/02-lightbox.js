@@ -20,9 +20,8 @@ const imagesHTML = (imagesArray) =>
 gallery.insertAdjacentHTML("beforeend", imagesHTML(galleryItems));
 console.log(gallery);
 
-let lightbox = new SimpleLightbox(".gallery a",);
-lightbox.on("show.simplelightbox", function altCaptions () {
-    // derp
-    captions: true;
-    captionsData: "alt";
-})
+let lightbox = new SimpleLightbox(".gallery a", {
+  // captions: true,
+  captionDelay: 250,
+  captionsData: "alt",
+});
